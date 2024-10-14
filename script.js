@@ -1,9 +1,7 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const newUser = urlParams.get('PID')
-console.log(newUser);
+const urlParams = new URLSearchParams(window.location.search);
 
 $(document).ready(function() {
-    // Just replacing the value of the 'content' attribute will not work.
-    $('head').append( '<meta name="description" content="'+urlParams.get('PID')+'">' );
+    $('head').append( '<meta property="og:title" content="'+urlParams.get('title')+'">' );
+    $('head').append( '<meta property="og:description" content="'+urlParams.get('description')+'">' );
+    $('head').append( '<meta property="og:image" content="'+urlParams.get('image')+'">' );
 });
