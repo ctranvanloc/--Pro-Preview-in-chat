@@ -1,4 +1,4 @@
-$(document).ready(function(){
-    $('title').text("Your new title tag here");
-    $('meta[name=description]').attr('content', 'new Meta Description here');
-});
+const queryString = window.location.search;
+console.log(queryString);
+const newUser = urlParams.get('PID')
+console.log(newUser);
