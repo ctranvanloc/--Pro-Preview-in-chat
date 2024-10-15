@@ -1,5 +1,4 @@
-const urlParams = new URLSearchParams(window.location.search);
-
+const urlParams = new URLSearchParams(window.location.search).replace("%", " ");
 $(document).ready(function() {
     $('head').append( '<meta property="og:title" content="'+urlParams.get('title')+'">' );
     $('head').append( '<meta property="og:description" content="'+urlParams.get('description')+'">' );
