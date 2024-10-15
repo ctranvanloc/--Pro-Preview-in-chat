@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-const title = urlParams.get('title').replace("%", " ");
-const description = urlParams.get('description').replace("%", " ");
+const title = urlParams.get('title').replace(/%/g, " ");
+const description = urlParams.get('description').replace(/%/g, " ");
 $(document).ready(function() {
     $('head').append( '<meta property="og:title" content="'+title+'">' );
     $('head').append( '<meta property="og:description" content="'+description+'">' );
